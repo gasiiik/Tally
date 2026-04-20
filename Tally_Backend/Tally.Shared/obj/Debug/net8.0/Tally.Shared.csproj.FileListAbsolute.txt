@@ -1,0 +1,11 @@
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\bin\Debug\net8.0\Tally.Shared.deps.json
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\bin\Debug\net8.0\Tally.Shared.dll
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\bin\Debug\net8.0\Tally.Shared.pdb
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.AssemblyInfoInputs.cache
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.AssemblyInfo.cs
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.csproj.CoreCompileInputs.cache
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.dll
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\refint\Tally.Shared.dll
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.pdb
+C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\ref\Tally.Shared.dll

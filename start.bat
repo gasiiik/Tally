@@ -1,0 +1,6 @@
+@echo off
+echo Zapinam Backend...
+start cmd /k "cd tally_backend\tally_backend && dotnet run"
+
+echo Zapinam Avalonii...
+start cmd /k "cd C:\PRG\Avalonia\Tally\Tally\Tally.Desktop && dotnet run"
