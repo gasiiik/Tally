@@ -9,3 +9,4 @@ C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.d
 C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\refint\Tally.Shared.dll
 C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.pdb
 C:\PRG\Avalonia\Tally\tally_backend\Tally.Shared\obj\Debug\net8.0\ref\Tally.Shared.dll
+C:\PRG\Avalonia\Tally\Tally_Backend\Tally.Shared\obj\Debug\net8.0\Tally.Shared.sourcelink.json

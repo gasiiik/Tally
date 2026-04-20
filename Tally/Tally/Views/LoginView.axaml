@@ -6,20 +6,189 @@
              x:Class="Tally.Views.LoginView"
              xmlns:vm="using:Tally.ViewModels"
              x:DataType="vm:LoginViewModel"
+             Background="#1F85D8"
 
              >
  
 
 
+<Grid Background="#121212" ClipToBounds="True">
+    
+    <Grid.Styles>
+        
+        <Style Selector="Border.animCircle1">
+            <Style.Animations>
+                <Animation Duration="0:0:12" IterationCount="Infinite" PlaybackDirection="Alternate">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="TranslateTransform.X" Value="0"/>
+                        <Setter Property="TranslateTransform.Y" Value="0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="TranslateTransform.X" Value="60"/>
+                        <Setter Property="TranslateTransform.Y" Value="40"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+
+        <Style Selector="Border.animCircle2">
+            <Style.Animations>
+                <Animation Duration="0:0:18" IterationCount="Infinite" PlaybackDirection="Alternate">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="TranslateTransform.X" Value="0"/>
+                        <Setter Property="TranslateTransform.Y" Value="0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="TranslateTransform.X" Value="-80"/>
+                        <Setter Property="TranslateTransform.Y" Value="-50"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+
+        <Style Selector="Border.animCircle3">
+            <Style.Animations>
+                <Animation Duration="0:0:15" IterationCount="Infinite" PlaybackDirection="Alternate">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="TranslateTransform.X" Value="0"/>
+                        <Setter Property="TranslateTransform.Y" Value="0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="TranslateTransform.X" Value="-40"/>
+                        <Setter Property="TranslateTransform.Y" Value="70"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </Grid.Styles>
+
+    <Border Classes="animCircle1"
+            Width="200" Height="200" 
+            CornerRadius="100" 
+            Background="#1F5FD8" 
+            Opacity="0.4" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="-50,-50,0,0"
+            BoxShadow="0 15 50 15 #80000000">
+        <Border.RenderTransform>
+            <TranslateTransform X="0" Y="0"/>
+        </Border.RenderTransform>
+    </Border>
+
+    <Border Classes="animCircle2"
+            Width="250" Height="250" 
+            CornerRadius="125" 
+            Background="#1F5FD8" 
+            Opacity="0.3"
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Bottom" 
+            Margin="0,0,-80,-80"
+            BoxShadow="0 20 70 20 #90000000">
+        <Border.RenderTransform>
+            <TranslateTransform X="0" Y="0"/>
+        </Border.RenderTransform>
+    </Border>
+
+    <Border Classes="animCircle3"
+            Width="120" Height="120" 
+            CornerRadius="60" 
+            Background="#1F5FD8" 
+            Opacity="0.5"
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top" 
+            Margin="0,80,100,0"
+            BoxShadow="0 10 30 10 #60000000">
+        <Border.RenderTransform>
+            <TranslateTransform X="0" Y="0"/>
+        </Border.RenderTransform>
+    </Border>
+
+    <Border Background="#DA1E1E1E"
+            CornerRadius="20"
+            Padding="40,50"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            BoxShadow="0 15 40 10 #50000000">
+
+        <StackPanel Spacing="18" Width="210">
+            
+            <StackPanel.Styles>
+                
+                <Style Selector="TextBox">
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="Padding" Value="16,10"/>
+                    <Setter Property="Background" Value="#2D2D2D"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="#3D3D3D"/>  
+                </Style>
+                
+                <Style Selector="Button.primary">
+                    <Setter Property="Background" Value="#0078D4"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/> <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Cursor" Value="Hand"/> </Style>
+
+                <Style Selector="Button.primary:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="#005A9E"/>
+                </Style>
+            </StackPanel.Styles>
+
+            <Image Source="avares://Tally/Assets/tallylogo.png" 
+                   Width="130" 
+                   Height="130" 
+                   Margin="0,0,0,10"/>
+
+            <TextBlock Text="Přihlášení" 
+                       FontSize="26" 
+                       FontWeight="Bold" 
+                       Foreground="White"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="{Binding Status}" 
+                       Foreground="#FF6B6B" 
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       TextWrapping="Wrap"
+                       IsVisible="{Binding Status, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+            
+            <TextBox Text="{Binding UsernameInput}" 
+                     Watermark="Uživatelské jméno" />
+                     
+            <TextBox Text="{Binding PasswordInput}" 
+                     Watermark="Heslo" 
+                     PasswordChar="•"/>
+            
+            <Button Classes="primary"
+                    Content="Přihlásit se" 
+                    Command="{Binding PrihlasitCommand}" 
+                    Margin="0,10,0,0"/>
+
+            <Button Content="Zaregistrujte se." 
+             
+                    Background="Transparent" 
+                    Foreground="#0078D4" 
+                    BorderThickness="0" 
+                    HorizontalAlignment="Center"
+                    Cursor="Hand"/>  
+                    
+            <Button Content="Pokračovat jako host." 
+                    Background="Transparent" 
+                    Foreground="#0078D4" 
+                    BorderThickness="0" 
+                    HorizontalAlignment="Center"
+                    Cursor="Hand"/>       
+
+                    
+        </StackPanel>
+    </Border>
+</Grid>
 
 
-<StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-    <TextBlock Text="Přihlášení" HorizontalAlignment="Center"/>
-    <TextBlock Text="{Binding Status}" HorizontalAlignment="Center"/>
-    
-    <TextBox Text="{Binding UsernameInput}" Watermark="Napiš své jméno" Width="200"/>
-    <TextBox Text="{Binding PasswordInput}" Watermark="Napiš své heslo" Width="200" PasswordChar="•"/>
-    
-    <Button Content="Přihlásit se" Command="{Binding PrihlasitCommand}" HorizontalAlignment="Center"/>
-</StackPanel>
+
+
 </UserControl>

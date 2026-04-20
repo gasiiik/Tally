@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tally_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e239680071955e90edbaac68c7efe9968ee2d851")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tally_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tally_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
